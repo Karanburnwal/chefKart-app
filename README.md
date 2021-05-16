@@ -1,7 +1,7 @@
 # Chefkart Responsive App
 ## [ChefKart_app](https://goofy-banach-369a4f.netlify.app/)
 
-#### Subscription Adding Feature
+### `Subscription Adding Feature`
 One can subscribe chef from clicking  `+`   button or from `explore` section.
 
 ### `Renew and cancel Feature of subscription`
