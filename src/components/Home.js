@@ -3,12 +3,11 @@ import {ImCross} from 'react-icons/im'
 import {useState} from 'react'
 import Subscription from './Subscription'
 import Attendence from './Attendence'
-// import {RoomContext} from '../Context'
 import '../App.css'
 import React from 'react'
 import Sidebar from './Sidebar'
 
-export default function Navbar() {
+export default function Home() {
 
     const [toggle,setToggle]=useState(true);
     const [sidebar,setSidebar]=useState(false);
@@ -16,8 +15,9 @@ export default function Navbar() {
     return (
         <>
         
-            <div className="navbar">
-                <div className="navbar-center">
+            <div className="Home">
+                
+                <div className="Home-center">
                     <div className="header">
                         <div className="first">
                             { search&& <div className='search-bar'><button onClick={()=>setSearch(false)}><ImCross className='cross-search-bar'/></button><input type="text" placeholder='Search' /><FaSearch className='search'/></div>}
@@ -29,9 +29,10 @@ export default function Navbar() {
                         </div>
                         <button className='search' onClick={()=>setSearch(true)} ><FaSearch/></button>
                     </div>
+                    
                     <div className='link-options'>
-                        <button onClick={()=>setToggle(false)}>Attendence</button>
-                        <button onClick={()=>setToggle(true)}>Subsciption</button>
+                        <button className={!toggle&&"border-btn"} onClick={()=>setToggle(false)}>Attendence</button>
+                        <button className={toggle&&"border-btn"}  onClick={()=>setToggle(true)}>Subsciption</button>
                     </div>
                 </div>
                 {toggle?<Subscription/>:<Attendence/>}

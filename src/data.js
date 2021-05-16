@@ -1,3 +1,4 @@
+import img0 from './images/chef1.jpg'
 import img1 from './images/img1.jpg'
 import img2 from './images/img2.jpg'
 import img3 from './images/img3.jpg'
@@ -10,14 +11,14 @@ const data=[
     {
         name:"Rahul Agarwal",
         contact:"6343723633",
-        img:img7,
+        img:img0,
         mark:false
     },
     {
         name:"Anjali Saw",
         contact:"8343523633",
         img:img1,
-        mark:false
+        mark:true
     },
     {
         name:"Ayush Upadh",
@@ -50,10 +51,10 @@ const data=[
         mark:false
     },
     {
-        name:"Sonu Agarwal",
+        name:"Sonu Bora",
         contact:"633326633",
         img:img7,
-        mark:false
+        mark:true
     },
     
 ]

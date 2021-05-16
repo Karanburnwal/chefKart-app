@@ -1,11 +1,15 @@
 import React from 'react'
 import {IoIosCall} from 'react-icons/io'
-import {useState} from 'react'
-
+import {useState,useContext} from 'react'
+import {RoomContext} from '../Context'
 const month=["Jan", "Feb", "Mar", "Apr", "May", "Jun",
         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 const date="10 Mar 2021"
 export default function SubMember( {member}) {
+
+    const context=useContext(RoomContext);
+    const {removeSubscription}=context;
+
     const [end, setEnd]=useState("10 Apr 2021");
     function handleDate(){
         const day=10;
@@ -43,7 +47,7 @@ export default function SubMember( {member}) {
                     </div>
                 </div>
                 <div className="plan-btn">
-                    <button className='cancel-btn'>Cancel Plan</button>
+                    <button className='cancel-btn' onClick={()=>removeSubscription(member.name)}>Cancel Plan</button>
                     <button onClick={handleDate}>Renew Plan</button>
                 </div>
             </div>

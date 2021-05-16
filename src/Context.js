@@ -11,19 +11,34 @@ class RoomProvider extends Component {
     }
     componentDidMount(){
         let temp_sub=[];
-        temp_sub.push(data[0]);
         temp_sub.push(data[1]);
+        temp_sub.push(data[7]);
         this.setState({
             subData:temp_sub
         })
     }
     addSubscription=(index)=>{
         let temp_sub=[...this.state.subData];
-        temp_sub.push(data[index]);
+        let value=temp_sub.filter(member=>data[index]===member)
+        if(value.length===0){
+            temp_sub.push(data[index]);
+            this.setState({
+                subData:temp_sub,
+            })
+        }
+    }
+    removeSubscription=(name)=>{
+        let temp_sub_0=[...this.state.subData];
+        let temp_sub=temp_sub_0.filter((member)=>name!==member.name)
+        data.map((member,index)=>{
+            if(member.name===name){
+                member.mark=false;
+            }
+        })
+        // data[index].mark=false;
         this.setState({
             subData:temp_sub
         })
-
     }
 
     changeNav=(val)=>{
@@ -33,7 +48,7 @@ class RoomProvider extends Component {
     render() {
         return (
             <div>
-                <RoomContext.Provider value={{...this.state,addSubscription:this.addSubscription,changePage:this.changePage,changeNav:this.changeNav}}>
+                <RoomContext.Provider value={{...this.state,addSubscription:this.addSubscription,changeNav:this.changeNav,removeSubscription:this.removeSubscription}}>
                         {this.props.children}
                     </RoomContext.Provider>
             </div>
