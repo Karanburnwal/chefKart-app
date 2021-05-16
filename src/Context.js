@@ -30,12 +30,13 @@ class RoomProvider extends Component {
     removeSubscription=(name)=>{
         let temp_sub_0=[...this.state.subData];
         let temp_sub=temp_sub_0.filter((member)=>name!==member.name)
-        data.map((member,index)=>{
+        let index=data.map((member,index)=>{
             if(member.name===name){
                 member.mark=false;
             }
+            return index;
         })
-        // data[index].mark=false;
+        if(index) index=0;
         this.setState({
             subData:temp_sub
         })
