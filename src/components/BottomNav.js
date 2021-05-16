@@ -5,7 +5,7 @@ import {MdHeadsetMic}  from 'react-icons/md'
 import {RoomContext} from '../Context'
 export default function BottomNav() {
     const context=useContext(RoomContext);
-    const {nav,changeNav}=context;
+    const {changeNav}=context;
     return (
         <div className='bottom-nav'>
             <div className="bottom-nav-center">

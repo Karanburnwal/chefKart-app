@@ -6,7 +6,7 @@ import img5 from './images/img5.jpg'
 import img6 from './images/img6.jpg'
 import img7 from './images/img7.jpg'
 
-export default [
+const data=[
     {
         name:"Rahul Agarwal",
         contact:"6343723633",
@@ -57,3 +57,4 @@ export default [
     },
     
 ]
+export default data

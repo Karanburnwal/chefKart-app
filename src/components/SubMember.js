@@ -1,5 +1,4 @@
 import React from 'react'
-import chef1 from '../chef1.jpg'
 import {IoIosCall} from 'react-icons/io'
 import {useState} from 'react'
 

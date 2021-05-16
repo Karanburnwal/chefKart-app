@@ -1,9 +1,7 @@
 import './App.css';
-import {Switch,Route} from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Explore from './components/Explore'
 import ContactUs from './components/ContactUs'
-import BottomNav from './components/BottomNav';
 import {RoomContext} from './Context'
 import {useContext} from 'react'
 function App() {

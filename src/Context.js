@@ -7,7 +7,6 @@ const RoomContext=React.createContext();
 class RoomProvider extends Component {
     state={
         subData:[],
-        cond:true,
         nav:0
     }
     componentDidMount(){
@@ -19,7 +18,6 @@ class RoomProvider extends Component {
         })
     }
     addSubscription=(index)=>{
-        console.log(index);
         let temp_sub=[...this.state.subData];
         temp_sub.push(data[index]);
         this.setState({

@@ -1,5 +1,4 @@
 import React from 'react'
-import {ImCross} from 'react-icons/im'
 export default function Sidebar() {
     return (
         <div className='sidebar-content'>

@@ -1,15 +1,13 @@
 import React,{useContext} from 'react'
 import {FaBars,FaSearch} from 'react-icons/fa'
 import data from '../data'
-import chef1 from '../chef1.jpg'
 import {IoIosCall} from 'react-icons/io'
-import SubMember from './SubMember'
 import {RoomContext} from '../Context'
 import BottomNav from './BottomNav'
 
 export default function Explore() {
     const context=useContext(RoomContext);
-    const {changePage,addSubscription,nav}=context;
+    const {addSubscription}=context;
 
     return (
         <div className='explore'>
@@ -26,7 +24,7 @@ export default function Explore() {
                     
                     data.map((member,index)=>{
                         return (
-                            <>
+                            <div key={index}>
                                 <div className="member-header explore-member-header">
                                     <div className="image">
                                         <img src={member.img} alt="" />
@@ -40,7 +38,7 @@ export default function Explore() {
                                     </div>
                                     <button name='submit' value={index} onClick={()=>addSubscription(index)}>ADD</button>
                                 </div>
-                            </>
+                            </div>
                         )
                     })
                 }

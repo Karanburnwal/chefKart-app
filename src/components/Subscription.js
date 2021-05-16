@@ -1,9 +1,8 @@
 import React from 'react'
-import {useState,useContext} from 'react'
+import {useContext} from 'react'
 import SubMember from './SubMember'
 // import data from '../data'
 import {RoomContext} from '../Context'
-import {Link} from 'react-router-dom'
 import BottomNav from './BottomNav'
 export default function Subscription() {
     const context=useContext(RoomContext);
@@ -17,8 +16,8 @@ export default function Subscription() {
                 <h3>My Subscription</h3>
                 </div>
                 {
-                    subData.map((member)=>{
-                        return <SubMember member={member}/>
+                    subData.map((member,index)=>{
+                        return <SubMember key={index} member={member}/>
                     })
                 }
                 {/* <button className='subscribe_btn'>+</button> */}

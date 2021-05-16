@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaBars, FaSearch } from 'react-icons/fa'
+import { FaBars} from 'react-icons/fa'
 import BottomNav from './BottomNav'
 
 export default function ContactUs() {

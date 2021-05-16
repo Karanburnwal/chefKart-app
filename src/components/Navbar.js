@@ -1,19 +1,14 @@
 import {FaBars,FaSearch} from 'react-icons/fa'
 import {ImCross} from 'react-icons/im'
-import {useState,useContext} from 'react'
+import {useState} from 'react'
 import Subscription from './Subscription'
 import Attendence from './Attendence'
-import BottomNav from './BottomNav'
-import {RoomContext} from '../Context'
-import Explore from './Explore'
+// import {RoomContext} from '../Context'
 import '../App.css'
 import React from 'react'
 import Sidebar from './Sidebar'
 
 export default function Navbar() {
-    
-    const context=useContext(RoomContext);
-    const {cond}=context;
 
     const [toggle,setToggle]=useState(true);
     const [sidebar,setSidebar]=useState(false);
@@ -21,8 +16,7 @@ export default function Navbar() {
     return (
         <>
         
-        {
-            cond?<div className="navbar">
+            <div className="navbar">
                 <div className="navbar-center">
                     <div className="header">
                         <div className="first">
@@ -41,8 +35,7 @@ export default function Navbar() {
                     </div>
                 </div>
                 {toggle?<Subscription/>:<Attendence/>}
-            </div>:<Explore/>
-        }
+            </div>
             </>
     )
 }
