@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
-
+import {Switch,Route} from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Explore from './components/Explore'
+import ContactUs from './components/ContactUs'
+import BottomNav from './components/BottomNav';
+import {RoomContext} from './Context'
+import {useContext} from 'react'
 function App() {
+  const context=useContext(RoomContext);
+    const {nav}=context;
+  let page=<Navbar/>
+  if(nav===0){
+    page=<Navbar/>
+  }else if(nav===1){
+    page=<Explore/>
+  }else{
+    page=<ContactUs/>
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="app">
+        {page}
+      </div>
+    </>
   );
 }
 

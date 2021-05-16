@@ -1,38 +1,342 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  text-decoration: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  /* padding: 20px 5px; */
+  position: sticky;
+  top: 0;
+  background-color: orange;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+.perfect-header {
+  padding: 20px 0px;
+}
+.first {
+  display: flex;
+}
+.first h2 {
+  color: white;
+  font-weight: 600;
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+.bars,
+.search {
+  color: white;
+  font-size: 1.3rem;
+  margin: 7px 19px 3px 10px;
+}
+.search {
+  font-weight: 600;
+}
+/* member-header */
+
+.member-header {
+  display: flex;
+}
+.image {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.image img {
+  /* margin: 0 auto; */
+  height: 50px;
+  /* width: auto; */
+}
+.details {
+  margin-left: 25px;
+}
+.phone-no {
+  justify-content: space-between;
+  font-size: 0.7rem;
+  display: flex;
+  margin-top: 10px;
+  color: orange;
+}
+.phone-no p {
+  margin-top: -2px;
+  color: rgba(0, 0, 0, 0.658);
+}
+/* -.member-header */
+
+/* app */
+
+.app {
+  position: relative;
+  background-color: #f4f4f4;
+  height: 100%;
+  /* overflow: hidden; */
+  width: 365px;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+/* -app */
+
+/* navbar=Home */
+
+/* header */
+.navbar {
+  /* position: sticky; */
+  /* width: 365px; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -0%); */
+}
+.navbar-center {
+  position: sticky;
+  top: 0;
+  padding-top: 20px;
+  background-color: orange;
+  height: 120px;
+}
+
+.link-options {
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+  /* padding: 0 38px 0 38px; */
+}
+.link-options button {
+  padding: 10px 50px 10px 50px;
+  font-size: 1rem;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.link-options button:hover {
+  transition: 0.3s;
+  background-color: rgba(233, 155, 10, 0.404);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* -header */
+
+/* subscription */
+
+.subscription-header {
+  margin: -30px 20px 25px 20px;
+  color: rgba(0, 0, 0, 0.678);
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+/* -subscription */
+
+/* subMember */
+
+.subscribed-member {
+  /* border: 1px black solid; */
+  background-color: rgb(255, 252, 252);
+  margin: 10px 25px;
+  padding: 40px 30px;
+  border-radius: 7px;
+}
+
+.tag {
+  width: 50px;
+  color: white;
+  background-color: orange;
+  padding: 1px 4px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  margin: -20px 0 10px 225px;
+  font-size: 0.7rem;
+}
+
+/* .subscribed-member-header */
+
+/* .subscribed-member-center */
+
+.subscribed-member-center {
+  margin-top: 14px;
+  border-top: 3px #f4f4f4 solid;
+  padding-top: 12px;
+}
+.plan-date {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.plan-date p {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.411);
+}
+.plan-date h5 {
+  margin-top: 4px;
+}
+.plan-btn {
+  display: flex;
+  justify-content: space-between;
+}
+.plan-btn button {
+  background-color: orange;
+  color: white;
+  margin-top: 20px;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.plan-btn .cancel-btn {
+  color: rgba(0, 0, 0, 0.507);
+  background-color: transparent;
+  border: 1px rgba(0, 0, 0, 0.411) solid;
+}
+
+/* Subscribed_btn */
+
+.subscribe_btn {
+  position: sticky;
+  top: 82%;
+  font-size: 2rem;
+  color: orange;
+  padding: 2px 10px;
+  margin: -20px 10px;
+  margin-left: 260px;
+  border-radius: 50%;
+  background-color: rgb(243, 236, 236);
+}
+/* Subscribed_btn */
+
+/* -navbar=Home */
+
+/* explore */
+
+.explore {
+  margin-top: -60px;
+}
+
+.explore-member-header {
+  background-color: white;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.explore-member-header button {
+  /* position: absolute; */
+  text-align: end;
+  color: white;
+  margin-top: 10px;
+  margin-left: 75px;
+  right: 30px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: orange;
+  transition: 0.3s;
+}
+.details {
+  width: 100px;
+}
+
+.explore-member-header button:hover {
+  background-color: rgba(255, 166, 0, 0.664);
+}
+
+/* bottom-nav */
+
+.bottom-nav {
+  position: sticky;
+  top: 92%;
+  /* margin-top: 400px; */
+  background-color: white;
+  padding: 10px 0px;
+}
+.bottom-nav-center {
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.bottom-nav-center button {
+  font-size: 1.5rem;
+}
+/* attendence */
+.attendence {
+  height: 632px;
+}
+
+/* contactUs */
+.contactUs {
+  height: 778px;
+}
+.contact-Us-body {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: 20px;
+  text-align: center;
+}
+.contact-Us-body input {
+  margin-top: 20px;
+  outline: none;
+  padding: 0.2rem;
+  font-size: 0.8rem;
+}
+
+.contact-Us-body button {
+  padding: 10px;
+  margin-top: 30px;
+  font-size: 1rem;
+  background-color: rgb(19, 142, 163);
+  color: white;
+}
+.contact-Us-body p {
+  margin-top: 20px;
+}
+
+/* bars */
+.sidebar {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: -20px;
+  position: absolute;
+  width: 365px;
+  /* background-image: linear-gradient(90deg, #f4f4f4 20%, rgba(0, 0, 0, 0.582)); */
+  background-image: linear-gradient(
+    90deg,
+    #f4f4f4 60%,
+    #f5ba55 20%,
+    rgba(0, 0, 0, 0.562) 40%
+  );
+  padding-bottom: 640px;
+}
+.cross {
+  margin-right: 75px;
+  color: red;
+  font-size: 1.1rem;
+  padding: 10px;
+}
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -20px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.507);
+  width: 100%;
+  padding-bottom: 646px;
+}
+.search-bar input {
+  margin: 20px 0 0 25px;
+  outline: none;
+  font-size: 1.2rem;
+  padding: 2px;
+}
+.search-bar .search {
+  margin-top: 20px;
+  padding-top: 5px;
+}
+.cross-search-bar {
+  margin-top: 20px;
+  color: aqua;
+  font-size: 1.3rem;
+  padding-left: 20px;
+}
+/* -bars */

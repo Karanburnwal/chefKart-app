@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://localhost:3000/explore -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>ChefKart</title>
+  <style>body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvaW5kZXguY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsU0FBUztFQUNUOztjQUVZO0VBQ1osbUNBQW1DO0VBQ25DLGtDQUFrQztBQUNwQzs7QUFFQTtFQUNFO2FBQ1c7QUFDYiIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuICBtYXJnaW46IDA7XG4gIGZvbnQtZmFtaWx5OiAtYXBwbGUtc3lzdGVtLCBCbGlua01hY1N5c3RlbUZvbnQsICdTZWdvZSBVSScsICdSb2JvdG8nLCAnT3h5Z2VuJyxcbiAgICAnVWJ1bnR1JywgJ0NhbnRhcmVsbCcsICdGaXJhIFNhbnMnLCAnRHJvaWQgU2FucycsICdIZWx2ZXRpY2EgTmV1ZScsXG4gICAgc2Fucy1zZXJpZjtcbiAgLXdlYmtpdC1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XG4gIC1tb3otb3N4LWZvbnQtc21vb3RoaW5nOiBncmF5c2NhbGU7XG59XG5cbmNvZGUge1xuICBmb250LWZhbWlseTogc291cmNlLWNvZGUtcHJvLCBNZW5sbywgTW9uYWNvLCBDb25zb2xhcywgJ0NvdXJpZXIgTmV3JyxcbiAgICBtb25vc3BhY2U7XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */</style><style>* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.header {
+  background-color: orange;
+  display: flex;
+  justify-content: space-between;
+}
+.first {
+  display: flex;
+}
+.first h2 {
+  color: white;
+  font-weight: 600;
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+.bars,
+.search {
+  color: white;
+  font-size: 1.3rem;
+  margin: 7px 19px 3px 10px;
+}
+.search {
+  font-weight: 600;
+}
+/* member-header */
+
+.member-header {
+  display: flex;
+}
+.image {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.image img {
+  /* margin: 0 auto; */
+  height: 50px;
+  /* width: auto; */
+}
+.details {
+  margin-left: 25px;
+}
+.phone-no {
+  justify-content: space-between;
+  font-size: 0.7rem;
+  display: flex;
+  margin-top: 10px;
+  color: orange;
+}
+.phone-no p {
+  margin-top: -2px;
+  color: rgba(0, 0, 0, 0.658);
+}
+/* -.member-header */
+
+/* app */
+.app {
+  position: absolute;
+  background-color: aqua;
+  height: 100%;
+  width: 365px;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+/* -app */
+
+/* navbar=Home */
+
+/* header */
+.navbar {
+  position: absolute;
+  width: 365px;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+.navbar-center {
+  padding-top: 20px;
+  background-color: orange;
+  height: 120px;
+}
+
+.link-options {
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+  /* padding: 0 38px 0 38px; */
+}
+.link-options button {
+  padding: 10px 50px 10px 50px;
+  font-size: 1rem;
+  color: white;
+}
+.link-options button:hover {
+  transition: 0.3s;
+  background-color: rgba(233, 155, 10, 0.404);
+}
+
+/* -header */
+
+/* subscription */
+
+.subscription-header {
+  margin: 25px 20px;
+  color: rgba(0, 0, 0, 0.678);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* -subscription */
+
+/* subMember */
+
+.subscribed-member {
+  /* border: 1px black solid; */
+  background-color: rgb(247, 243, 243);
+  margin: 10px 25px;
+  padding: 40px 30px;
+  border-radius: 7px;
+}
+.tag {
+  position: absolute;
+  color: white;
+  background-color: orange;
+  left: 76%;
+  padding: 1px 4px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  margin-top: -25px;
+  font-size: 0.7rem;
+  /* margin-bottom: 10px; */
+}
+
+/* .subscribed-member-header */
+
+/* .subscribed-member-center */
+
+.subscribed-member-center {
+  margin-top: 14px;
+  border-top: 3px white solid;
+  padding-top: 12px;
+}
+.plan-date {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.plan-date p {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.411);
+}
+.plan-date h5 {
+  margin-top: 4px;
+}
+.plan-btn {
+  display: flex;
+  justify-content: space-between;
+}
+.plan-btn button {
+  background-color: orange;
+  color: white;
+  margin-top: 20px;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.plan-btn .cancel-btn {
+  color: rgba(0, 0, 0, 0.507);
+  background-color: transparent;
+  border: 1px rgba(0, 0, 0, 0.411) solid;
+}
+
+/* Subscribed_btn */
+
+.subscribe_btn {
+  position: sticky;
+  top: 85%;
+  font-size: 2rem;
+  color: orange;
+  padding: 2px 10px;
+  margin: -20px 10px;
+  margin-left: 250px;
+  border-radius: 50%;
+  background-color: rgb(224, 221, 221);
+}
+/* Subscribed_btn */
+
+/* -navbar=Home */
+
+/* explore */
+
+.explore {
+  /* height: 100%;
+  overflow: hidden;
+  background-color: #f4f4f4; */
+  position: absolute;
+  width: 365px;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -0%);
+}
+
+.explore-member-header {
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin: 20px;
+}
+
+.explore-member-header button {
+  position: absolute;
+  color: white;
+  margin-top: 10px;
+  right: 30px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: orange;
+  transition: 0.3s;
+}
+.explore-member-header button:hover {
+  background-color: rgba(255, 166, 0, 0.664);
+}
+
+/* bottom-nav */
+.bottom-nav {
+  position: sticky;
+  top: 100%;
+}
+.bottom-nav-center {
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+/*# sourceMappingURL=data:application/json;base64,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QUFDdEM7QUFDQSxtQkFBbUI7O0FBRW5CLGlCQUFpQjs7QUFFakIsWUFBWTs7QUFFWjtFQUNFOzs4QkFFNEI7RUFDNUIsa0JBQWtCO0VBQ2xCLFlBQVk7RUFDWixTQUFTO0VBQ1QsT0FBTztFQUNQLCtCQUErQjtBQUNqQzs7QUFFQTtFQUNFLHlCQUF5QjtFQUN6QixhQUFhO0VBQ2IsWUFBWTtBQUNkOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLFlBQVk7RUFDWixnQkFBZ0I7RUFDaEIsV0FBVztFQUNYLGFBQWE7RUFDYixtQkFBbUI7RUFDbkIsd0JBQXdCO0VBQ3hCLGdCQUFnQjtBQUNsQjtBQUNBO0VBQ0UsMENBQTBDO0FBQzVDOztBQUVBLGVBQWU7QUFDZjtFQUNFLGdCQUFnQjtFQUNoQixTQUFTO0FBQ1g7QUFDQTtFQUNFLGlCQUFpQjtFQUNqQixhQUFhO0VBQ2IsNkJBQTZCO0VBQzdCLGtCQUFrQjtFQUNsQixtQkFBbUI7QUFDckIiLCJzb3VyY2VzQ29udGVudCI6WyIqIHtcbiAgcGFkZGluZzogMDtcbiAgbWFyZ2luOiAwO1xufVxuYSB7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbn1cbmJ1dHRvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xuICBib3JkZXI6IG5vbmU7XG4gIGN1cnNvcjogcG9pbnRlcjtcbn1cbi5oZWFkZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBvcmFuZ2U7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2Vlbjtcbn1cbi5maXJzdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG59XG4uZmlyc3QgaDIge1xuICBjb2xvcjogd2hpdGU7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIC8qIGZvbnQtZmFtaWx5OiBBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmOyAqL1xufVxuLmJhcnMsXG4uc2VhcmNoIHtcbiAgY29sb3I6IHdoaXRlO1xuICBmb250LXNpemU6IDEuM3JlbTtcbiAgbWFyZ2luOiA3cHggMTlweCAzcHggMTBweDtcbn1cbi5zZWFyY2gge1xuICBmb250LXdlaWdodDogNjAwO1xufVxuLyogbWVtYmVyLWhlYWRlciAqL1xuXG4ubWVtYmVyLWhlYWRlciB7XG4gIGRpc3BsYXk6IGZsZXg7XG59XG4uaW1hZ2Uge1xuICB3aWR0aDogNjBweDtcbiAgaGVpZ2h0OiA2MHB4O1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBib3JkZXItcmFkaXVzOiA1MCU7XG59XG4uaW1hZ2UgaW1nIHtcbiAgLyogbWFyZ2luOiAwIGF1dG87ICovXG4gIGhlaWdodDogNTBweDtcbiAgLyogd2lkdGg6IGF1dG87ICovXG59XG4uZGV0YWlscyB7XG4gIG1hcmdpbi1sZWZ0OiAyNXB4O1xufVxuLnBob25lLW5vIHtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xuICBmb250LXNpemU6IDAuN3JlbTtcbiAgZGlzcGxheTogZmxleDtcbiAgbWFyZ2luLXRvcDogMTBweDtcbiAgY29sb3I6IG9yYW5nZTtcbn1cbi5waG9uZS1ubyBwIHtcbiAgbWFyZ2luLXRvcDogLTJweDtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC42NTgpO1xufVxuLyogLS5tZW1iZXItaGVhZGVyICovXG5cbi8qIGFwcCAqL1xuLmFwcCB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgYmFja2dyb3VuZC1jb2xvcjogYXF1YTtcbiAgaGVpZ2h0OiAxMDAlO1xuICB3aWR0aDogMzY1cHg7XG4gIGxlZnQ6IDUwJTtcbiAgdG9wOiAwJTtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTAlKTtcbn1cbi8qIC1hcHAgKi9cblxuLyogbmF2YmFyPUhvbWUgKi9cblxuLyogaGVhZGVyICovXG4ubmF2YmFyIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB3aWR0aDogMzY1cHg7XG4gIGxlZnQ6IDUwJTtcbiAgdG9wOiAwJTtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTAlKTtcbn1cbi5uYXZiYXItY2VudGVyIHtcbiAgcGFkZGluZy10b3A6IDIwcHg7XG4gIGJhY2tncm91bmQtY29sb3I6IG9yYW5nZTtcbiAgaGVpZ2h0OiAxMjBweDtcbn1cblxuLmxpbmstb3B0aW9ucyB7XG4gIG1hcmdpbi10b3A6IDQ1cHg7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgLyogcGFkZGluZzogMCAzOHB4IDAgMzhweDsgKi9cbn1cbi5saW5rLW9wdGlvbnMgYnV0dG9uIHtcbiAgcGFkZGluZzogMTBweCA1MHB4IDEwcHggNTBweDtcbiAgZm9udC1zaXplOiAxcmVtO1xuICBjb2xvcjogd2hpdGU7XG59XG4ubGluay1vcHRpb25zIGJ1dHRvbjpob3ZlciB7XG4gIHRyYW5zaXRpb246IDAuM3M7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjMzLCAxNTUsIDEwLCAwLjQwNCk7XG59XG5cbi8qIC1oZWFkZXIgKi9cblxuLyogc3Vic2NyaXB0aW9uICovXG5cbi5zdWJzY3JpcHRpb24taGVhZGVyIHtcbiAgbWFyZ2luOiAyNXB4IDIwcHg7XG4gIGNvbG9yOiByZ2JhKDAsIDAsIDAsIDAuNjc4KTtcbiAgZm9udC1mYW1pbHk6IEFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWY7XG59XG5cbi8qIC1zdWJzY3JpcHRpb24gKi9cblxuLyogc3ViTWVtYmVyICovXG5cbi5zdWJzY3JpYmVkLW1lbWJlciB7XG4gIC8qIGJvcmRlcjogMXB4IGJsYWNrIHNvbGlkOyAqL1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjQ3LCAyNDMsIDI0Myk7XG4gIG1hcmdpbjogMTBweCAyNXB4O1xuICBwYWRkaW5nOiA0MHB4IDMwcHg7XG4gIGJvcmRlci1yYWRpdXM6IDdweDtcbn1cbi50YWcge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgYmFja2dyb3VuZC1jb2xvcjogb3JhbmdlO1xuICBsZWZ0OiA3NiU7XG4gIHBhZGRpbmc6IDFweCA0cHg7XG4gIGJvcmRlci10b3AtbGVmdC1yYWRpdXM6IDhweDtcbiAgYm9yZGVyLWJvdHRvbS1sZWZ0LXJhZGl1czogOHB4O1xuICBtYXJnaW4tdG9wOiAtMjVweDtcbiAgZm9udC1zaXplOiAwLjdyZW07XG4gIC8qIG1hcmdpbi1ib3R0b206IDEwcHg7ICovXG59XG5cbi8qIC5zdWJzY3JpYmVkLW1lbWJlci1oZWFkZXIgKi9cblxuLyogLnN1YnNjcmliZWQtbWVtYmVyLWNlbnRlciAqL1xuXG4uc3Vic2NyaWJlZC1tZW1iZXItY2VudGVyIHtcbiAgbWFyZ2luLXRvcDogMTRweDtcbiAgYm9yZGVyLXRvcDogM3B4IHdoaXRlIHNvbGlkO1xuICBwYWRkaW5nLXRvcDogMTJweDtcbn1cbi5wbGFuLWRhdGUge1xuICBtYXJnaW4tdG9wOiAxMHB4O1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG59XG4ucGxhbi1kYXRlIHAge1xuICBmb250LXNpemU6IDAuN3JlbTtcbiAgZm9udC13ZWlnaHQ6IDcwMDtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC40MTEpO1xufVxuLnBsYW4tZGF0ZSBoNSB7XG4gIG1hcmdpbi10b3A6IDRweDtcbn1cbi5wbGFuLWJ0biB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2Vlbjtcbn1cbi5wbGFuLWJ0biBidXR0b24ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBvcmFuZ2U7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgbWFyZ2luLXRvcDogMjBweDtcbiAgcGFkZGluZzogOHB4IDEycHg7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbn1cblxuLnBsYW4tYnRuIC5jYW5jZWwtYnRuIHtcbiAgY29sb3I6IHJnYmEoMCwgMCwgMCwgMC41MDcpO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDtcbiAgYm9yZGVyOiAxcHggcmdiYSgwLCAwLCAwLCAwLjQxMSkgc29saWQ7XG59XG5cbi8qIFN1YnNjcmliZWRfYnRuICovXG5cbi5zdWJzY3JpYmVfYnRuIHtcbiAgcG9zaXRpb246IHN0aWNreTtcbiAgdG9wOiA4NSU7XG4gIGZvbnQtc2l6ZTogMnJlbTtcbiAgY29sb3I6IG9yYW5nZTtcbiAgcGFkZGluZzogMnB4IDEwcHg7XG4gIG1hcmdpbjogLTIwcHggMTBweDtcbiAgbWFyZ2luLWxlZnQ6IDI1MHB4O1xuICBib3JkZXItcmFkaXVzOiA1MCU7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYigyMjQsIDIyMSwgMjIxKTtcbn1cbi8qIFN1YnNjcmliZWRfYnRuICovXG5cbi8qIC1uYXZiYXI9SG9tZSAqL1xuXG4vKiBleHBsb3JlICovXG5cbi5leHBsb3JlIHtcbiAgLyogaGVpZ2h0OiAxMDAlO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjRmNGY0OyAqL1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHdpZHRoOiAzNjVweDtcbiAgbGVmdDogNTAlO1xuICB0b3A6IDAlO1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtMCUpO1xufVxuXG4uZXhwbG9yZS1tZW1iZXItaGVhZGVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2Y0ZjRmNDtcbiAgcGFkZGluZzogMTBweDtcbiAgbWFyZ2luOiAyMHB4O1xufVxuXG4uZXhwbG9yZS1tZW1iZXItaGVhZGVyIGJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgY29sb3I6IHdoaXRlO1xuICBtYXJnaW4tdG9wOiAxMHB4O1xuICByaWdodDogMzBweDtcbiAgcGFkZGluZzogMTBweDtcbiAgYm9yZGVyLXJhZGl1czogMTVweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogb3JhbmdlO1xuICB0cmFuc2l0aW9uOiAwLjNzO1xufVxuLmV4cGxvcmUtbWVtYmVyLWhlYWRlciBidXR0b246aG92ZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2JhKDI1NSwgMTY2LCAwLCAwLjY2NCk7XG59XG5cbi8qIGJvdHRvbS1uYXYgKi9cbi5ib3R0b20tbmF2IHtcbiAgcG9zaXRpb246IHN0aWNreTtcbiAgdG9wOiAxMDAlO1xufVxuLmJvdHRvbS1uYXYtY2VudGVyIHtcbiAgZm9udC1zaXplOiAxLjhyZW07XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtZXZlbmx5O1xuICBtYXJnaW4tbGVmdDogLTIwcHg7XG4gIG1hcmdpbi1yaWdodDogLTIwcHg7XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div><div class="app"><div class="navbar"><div class="navbar-center"><div class="header"><div class="first"><button class="bars"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg></button><h2>ChefKart</h2></div><button class="search"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg></button></div><div class="link-options"><button>Attendence</button><button>Subsciption</button></div><div class="subscription"><button class="subscribe_btn">+</button><div class="subscription-center"><div class="subscription-header"><h3>My Subscription</h3></div><div class="subscribed-member"><p class="tag">Premium</p><div class="member-header"><div class="image"><img src="./ChefKart_files/img7.7a4463ca.jpg" alt=""></div><div class="details"><h5>Rahul Agarwal</h5><div class="phone-no"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M436.9 364.8c-14.7-14.7-50-36.8-67.4-45.1-20.2-9.7-27.6-9.5-41.9.8-11.9 8.6-19.6 16.6-33.3 13.6-13.7-2.9-40.7-23.4-66.9-49.5-26.2-26.2-46.6-53.2-49.5-66.9-2.9-13.8 5.1-21.4 13.6-33.3 10.3-14.3 10.6-21.7.8-41.9C184 125 162 89.8 147.2 75.1c-14.7-14.7-18-11.5-26.1-8.6 0 0-12 4.8-23.9 12.7-14.7 9.8-22.9 18-28.7 30.3-5.7 12.3-12.3 35.2 21.3 95 27.1 48.3 53.7 84.9 93.2 124.3l.1.1.1.1c39.5 39.5 76 66.1 124.3 93.2 59.8 33.6 82.7 27 95 21.3 12.3-5.7 20.5-13.9 30.3-28.7 7.9-11.9 12.7-23.9 12.7-23.9 2.9-8.1 6.2-11.4-8.6-26.1z"></path></svg><p>6343723633</p></div></div></div><div class="subscribed-member-center"><div class="subscription-details"><h6>Subscription-details</h6><div class="plan-date"><div class="start"><p>Start</p><h5>10 Mar 2021</h5></div><div class="End"><p>End</p><h5>10 Apr 2021</h5></div></div></div><div class="plan-btn"><button class="cancel-btn">Cancel Plan</button><button>Renew Plan</button></div></div></div><div class="subscribed-member"><p class="tag">Premium</p><div class="member-header"><div class="image"><img src="./ChefKart_files/img1.ac5129bb.jpg" alt=""></div><div class="details"><h5>Anjali Saw</h5><div class="phone-no"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M436.9 364.8c-14.7-14.7-50-36.8-67.4-45.1-20.2-9.7-27.6-9.5-41.9.8-11.9 8.6-19.6 16.6-33.3 13.6-13.7-2.9-40.7-23.4-66.9-49.5-26.2-26.2-46.6-53.2-49.5-66.9-2.9-13.8 5.1-21.4 13.6-33.3 10.3-14.3 10.6-21.7.8-41.9C184 125 162 89.8 147.2 75.1c-14.7-14.7-18-11.5-26.1-8.6 0 0-12 4.8-23.9 12.7-14.7 9.8-22.9 18-28.7 30.3-5.7 12.3-12.3 35.2 21.3 95 27.1 48.3 53.7 84.9 93.2 124.3l.1.1.1.1c39.5 39.5 76 66.1 124.3 93.2 59.8 33.6 82.7 27 95 21.3 12.3-5.7 20.5-13.9 30.3-28.7 7.9-11.9 12.7-23.9 12.7-23.9 2.9-8.1 6.2-11.4-8.6-26.1z"></path></svg><p>8343523633</p></div></div></div><div class="subscribed-member-center"><div class="subscription-details"><h6>Subscription-details</h6><div class="plan-date"><div class="start"><p>Start</p><h5>10 Mar 2021</h5></div><div class="End"><p>End</p><h5>10 Apr 2021</h5></div></div></div><div class="plan-btn"><button class="cancel-btn">Cancel Plan</button><button>Renew Plan</button></div></div></div><div class="subscribed-member"><p class="tag">Premium</p><div class="member-header"><div class="image"><img src="./ChefKart_files/img3.db4adbce.jpg" alt=""></div><div class="details"><h5>Roshan Sonkar</h5><div class="phone-no"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M436.9 364.8c-14.7-14.7-50-36.8-67.4-45.1-20.2-9.7-27.6-9.5-41.9.8-11.9 8.6-19.6 16.6-33.3 13.6-13.7-2.9-40.7-23.4-66.9-49.5-26.2-26.2-46.6-53.2-49.5-66.9-2.9-13.8 5.1-21.4 13.6-33.3 10.3-14.3 10.6-21.7.8-41.9C184 125 162 89.8 147.2 75.1c-14.7-14.7-18-11.5-26.1-8.6 0 0-12 4.8-23.9 12.7-14.7 9.8-22.9 18-28.7 30.3-5.7 12.3-12.3 35.2 21.3 95 27.1 48.3 53.7 84.9 93.2 124.3l.1.1.1.1c39.5 39.5 76 66.1 124.3 93.2 59.8 33.6 82.7 27 95 21.3 12.3-5.7 20.5-13.9 30.3-28.7 7.9-11.9 12.7-23.9 12.7-23.9 2.9-8.1 6.2-11.4-8.6-26.1z"></path></svg><p>7343743337</p></div></div></div><div class="subscribed-member-center"><div class="subscription-details"><h6>Subscription-details</h6><div class="plan-date"><div class="start"><p>Start</p><h5>10 Mar 2021</h5></div><div class="End"><p>End</p><h5>10 Apr 2021</h5></div></div></div><div class="plan-btn"><button class="cancel-btn">Cancel Plan</button><button>Renew Plan</button></div></div></div><div class="subscribed-member"><p class="tag">Premium</p><div class="member-header"><div class="image"><img src="./ChefKart_files/img4.075cd195.jpg" alt=""></div><div class="details"><h5>Rex Smith</h5><div class="phone-no"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M436.9 364.8c-14.7-14.7-50-36.8-67.4-45.1-20.2-9.7-27.6-9.5-41.9.8-11.9 8.6-19.6 16.6-33.3 13.6-13.7-2.9-40.7-23.4-66.9-49.5-26.2-26.2-46.6-53.2-49.5-66.9-2.9-13.8 5.1-21.4 13.6-33.3 10.3-14.3 10.6-21.7.8-41.9C184 125 162 89.8 147.2 75.1c-14.7-14.7-18-11.5-26.1-8.6 0 0-12 4.8-23.9 12.7-14.7 9.8-22.9 18-28.7 30.3-5.7 12.3-12.3 35.2 21.3 95 27.1 48.3 53.7 84.9 93.2 124.3l.1.1.1.1c39.5 39.5 76 66.1 124.3 93.2 59.8 33.6 82.7 27 95 21.3 12.3-5.7 20.5-13.9 30.3-28.7 7.9-11.9 12.7-23.9 12.7-23.9 2.9-8.1 6.2-11.4-8.6-26.1z"></path></svg><p>243723633</p></div></div></div><div class="subscribed-member-center"><div class="subscription-details"><h6>Subscription-details</h6><div class="plan-date"><div class="start"><p>Start</p><h5>10 Mar 2021</h5></div><div class="End"><p>End</p><h5>10 Apr 2021</h5></div></div></div><div class="plan-btn"><button class="cancel-btn">Cancel Plan</button><button>Renew Plan</button></div></div></div></div></div></div></div><div class="bottom-nav"><div class="bottom-nav-center"><div class="home"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M268.608 25.48c-26.47.197-43.568 5.534-55.357 13.75-13.473 9.39-21.036 23.152-27.08 40.974 2.562 20.932 23.94 48.19 19.657 70.38-16.48-28.212-33.466-67.988-63.31-76.116-17.075-4.62-36.54-5.802-43.54-1.436-8.273 5.16-13.81 14.76-16.943 26.854-3.132 12.095-3.66 26.237-2.69 38.285 2.432 30.134 24.784 74.997 46.92 111.093 16.58 27.035 32.78 49.416 39.87 58.953a263.647 263.647 0 0 1 22.85-5.62c-1.538-18.02 1.384-34.673.828-53.947 4.206 18.19 7.84 34.576 14.275 51.36 12.383-1.772 25.42-2.8 38.85-2.82a262.144 262.144 0 0 1 28.256 1.463l14.22-41.562-2.373 43.103c17.118 2.644 34.412 7.158 51.38 13.978 12.21-12.758 16.877-27.402 24.99-41.186.398 16.003-4.507 31.896-15.052 45.464 8.902 4.1 17.684 8.87 26.268 14.38 41.514-67.15 66.69-133.49 61.885-198.7-1.497-20.33-6.088-38.187-12.69-51.105-6.6-12.92-14.827-20.444-23.493-22.704-6.985-1.822-24.825 2.828-39.44 9.496-26.947 10.81-48.5 45.717-55.894 69.53-.253-11.64 3.003-44.39 15.947-60.698-3.98-12.57-6.914-26.394-12.085-36.362-10.442-16.115-20.236-16.91-36.247-16.806zm-26.836 289.85c-25.985.123-50.39 4.192-70.77 10.214l-11.626 98.96c10.16-5.65 22.32-9.144 35.318-11.17 9.958-1.553 20.53-2.233 31.362-2.17 1.547.01 3.1.034 4.658.073 12.457.313 25.19 1.57 37.674 3.582 24.965 4.023 48.854 11.044 67.463 20.175 7.344 3.604 14.094 7.5 19.717 11.9l8.33-96.945c-38.464-25.67-82.153-34.81-122.125-34.62zm-15.84 113.86c-10.017-.06-19.652.554-28.464 1.928-16.116 2.513-29.044 7.62-37.168 14.707 50.417 46.585 123.38 52.03 190.373 22.225-3.786-4.99-11.387-11.32-22.752-16.897-16.367-8.032-38.93-14.78-62.398-18.562-13.2-2.127-26.71-3.32-39.59-3.4z"></path></svg></div><div class="home"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372zm198.4-588.1a32 32 0 0 0-24.5.5L414.9 415 296.4 686c-3.6 8.2-3.6 17.5 0 25.7 3.4 7.8 9.7 13.9 17.7 17 3.8 1.5 7.7 2.2 11.7 2.2 4.4 0 8.7-.9 12.8-2.7l271-118.6 118.5-271a32.06 32.06 0 0 0-17.7-42.7zM576.8 534.4l26.2 26.2-42.4 42.4-26.2-26.2L380 644.4 447.5 490 422 464.4l42.4-42.4 25.5 25.5L644.4 380l-67.6 154.4zM464.4 422L422 464.4l25.5 25.6 86.9 86.8 26.2 26.2 42.4-42.4-26.2-26.2-86.8-86.9z"></path></svg></div><div class="home"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12 1c-4.97 0-9 4.03-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h4v1h-7v2h6c1.66 0 3-1.34 3-3V10c0-4.97-4.03-9-9-9z"></path></svg></div></div></div></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="./ChefKart_files/bundle.js.download"></script><script src="./ChefKart_files/vendors_main.chunk.js.download"></script><script src="./ChefKart_files/main.chunk.js.download"></script>
+
+</body></html>
