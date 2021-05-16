@@ -31,8 +31,8 @@ export default function Home() {
                     </div>
                     
                     <div className='link-options'>
-                        <button className={!toggle&&"border-btn"} onClick={()=>setToggle(false)}>Attendence</button>
-                        <button className={toggle&&"border-btn"}  onClick={()=>setToggle(true)}>Subsciption</button>
+                        <button className={!toggle?"border-btn":undefined} onClick={()=>setToggle(false)}>Attendence</button>
+                        <button className={toggle?"border-btn":undefined}  onClick={()=>setToggle(true)}>Subsciption</button>
                     </div>
                 </div>
                 {toggle?<Subscription/>:<Attendence/>}
